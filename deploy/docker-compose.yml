@@ -1,0 +1,20 @@
+# Official n8n (Node.js) — does NOT run on Streamlit Cloud.
+# Use this later if you have a VPS / Docker host.
+# The Streamlit app in this repo is the always-on path for streamlit.app.
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=0.0.0.0
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - GENERIC_TIMEZONE=UTC
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:
