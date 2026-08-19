@@ -1,0 +1,29 @@
+{
+  "name": "سلام دنیا",
+  "nodes": [
+    {
+      "id": "manual",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [160, 200],
+      "parameters": {}
+    },
+    {
+      "id": "set",
+      "name": "Set Greeting",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [400, 200],
+      "parameters": {
+        "assignments": "message=سلام دنیا — n8n Flow آنلاین است\nlang=fa",
+        "includeOtherFields": true
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{ "node": "Set Greeting", "type": "main", "index": 0 }]]
+    }
+  }
+}

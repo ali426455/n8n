@@ -1,0 +1,26 @@
+[global]
+developmentMode = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showSidebarNavigation = false
+
+[theme]
+base = "dark"
+primaryColor = "#EA4B71"
+backgroundColor = "#101014"
+secondaryBackgroundColor = "#1A1A22"
+textColor = "#E8E8ED"
+font = "sans serif"
+
+[server]
+headless = true
+address = "0.0.0.0"
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+enableWebsocketCompression = false
+maxUploadSize = 20
