@@ -24,3 +24,7 @@ data/.key
 dist/
 build/
 .arena/
+official-n8n/
+.n8n-home/
+.n8n-runtime/
+n8n-runtime/
